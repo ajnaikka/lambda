@@ -1,0 +1,37 @@
+//inline_policy
+
+{
+    "Version": "2012-10-17",
+    "Statement": {
+        "Effect": "Allow",
+        "Action": "sts:AssumeRole",
+        "Resource": "arn:aws:iam::001082169132:role/S3GetObjectAccess"
+    }
+}
+
+
+
+//trust_policy
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::090943835041:role/s3"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
